@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="OmaMHELvn4Fn8Z1oauuiCkrlvfZCBdbKIYJhsT8N">
+    
+    <title>Plus for supplies</title>
+
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <link rel="stylesheet" href="/css/app.css" />
+	<script type="module" src="/js/app.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+
+<body class="antialiased flex flex-col min-h-screen">
+    <!-- navbar -->
+    <div x-data="{ open: false }" class="w-full text-gray-700 border border-gray-100">
+        <div class="flex flex-col max-w-screen-xl px-8 mx-auto lg:items-center lg:justify-between lg:flex-row">
+            <div class="flex flex-row items-center justify-between py-5">
+                <a href="http://ahmedstaging.github.io" class="z-50 w-32">
+                    <img src="http://ahmedstaging.github.io/img/logo.png" alt="">
+                </a>
+                <button class="rounded-lg lg:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{ 'hidden': !open, 'h-full': open }"
+                class="flex flex-col flex-grow lg:items-center pb-4 lg:pb-0 lg:flex lg:justify-between lg:flex-row lg:space-x-5 text-gray-800 lg:ml-64 lg:text-sm xl:text-base">
+                <a class="py-3 px-5 text-center border-b lg:p-0 lg:text-left lg:border-0 border-gray-50 hover:font-medium hover:text-gray-900"
+                    href="http://ahmedstaging.github.io">
+                    Home
+                </a>
+                <a class="py-3 px-5 text-center border-b lg:p-0 lg:text-left lg:border-0 border-gray-50 hover:font-medium hover:text-gray-900"
+                    href="http://ahmedstaging.github.io/about-us.html">
+                    About Us
+                </a>
+                <a class="py-3 px-5 text-center border-b lg:p-0 lg:text-left lg:border-0 border-gray-50 hover:font-medium hover:text-gray-900"
+                    href="http://ahmedstaging.github.io/products.html">
+                    Products
+                </a>
+                <a class="py-3 px-5 text-center border-b lg:p-0 lg:text-left lg:border-0 border-gray-50 hover:font-medium hover:text-gray-900"
+                    href="http://ahmedstaging.github.io/clients.html">
+                    Clients
+                </a>
+                <a class="py-3 px-5 text-center border-b lg:p-0 lg:text-left lg:border-0 border-gray-50 hover:font-medium hover:text-gray-900"
+                    href="http://ahmedstaging.github.io/news.html">
+                    News
+                </a>
+                <a class="py-3 px-5 text-center border-b lg:p-0 lg:text-left lg:border-0 border-gray-50 font-medium text-gray-900"
+                    href="http://ahmedstaging.github.io/contact-us.html">
+                    Contact us
+                </a>
+                <a class="py-3 px-5 text-center border-b lg:p-0 lg:text-left lg:border-0 border-gray-50 hover:font-medium hover:text-gray-900"
+                    href="http://ahmedstaging.github.io/carrer.html">
+                    Career
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <div
+        class="mt-8 container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden space-y-12  border-gray-100 py-4">
+        <div class="text-4xl font-bold text-center">
+            Contact Us
+        </div>
+
+        <div class="grid gap-4 grid-cols-1 lg:grid-cols-3">
+            <div class="border border-gray-50 shadow-lg p-5">
+                <div class="space-x-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="font-semibold">Phone Number</span>
+                </div>
+                <div class="ml-6">+20 100 000 0000</div>
+            </div>
+
+            <div class="border border-gray-50 shadow-lg p-5">
+                <div class="space-x-2">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span class="font-semibold">Whatsapp</span>
+                </div>
+                <div class="ml-6">+20 100 000 0000</div>
+            </div>
+
+            <div class="border border-gray-50 shadow-lg p-5">
+                <div class="space-x-2">
+                    <i class="fa-solid fa-at"></i>
+                    <span class="font-semibold">Email</span>
+                </div>
+                <div class="ml-6">example@example.com</div>
+            </div>
+
+            <div class="border border-gray-50 shadow-lg p-5">
+                <div class="space-x-2">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="font-semibold">Location</span>
+                </div>
+                <div class="ml-6">12th Street, Cairo, Egypt</div>
+            </div>
+        </div>
+
+        <div class="flex justify-center items-center">
+            <div class="space-x-3 mt-4 flex justify-center items-center lg:justify-start">
+    <a href="#"
+        class="bg-blue-500 px-2 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+        <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg>
+    </a>
+    <a href="#"
+        class="bg-blue-300 px-2 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+        <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+        </svg>
+    </a>
+    <a href="#"
+        class="bg-red-500 px-2 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+        <svg class="w-5 h-5 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z" />
+        </svg>
+    </a>
+    <a href="#"
+        class="bg-pink-600 px-2 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+        <svg class="w-5 h-5 fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <title>Pinterest icon</title>
+            <path
+                d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z" />
+        </svg>
+    </a>
+</div>
+        </div>
+
+        <div class="border border-gray-50 px-5 py-8 shadow-2xl space-y-4">
+            <div class="text-2xl font-bold text-center">
+                Leave us a message
+            </div>
+            <div>
+    <div>
+        <span class="uppercase text-sm text-gray-600 font-bold">Full Name</span>
+        <input class="w-full text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text"
+            placeholder="">
+    </div>
+    <div class="mt-8">
+        <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
+        <input class="w-full text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text">
+    </div>
+    <div class="mt-8">
+        <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
+        <textarea class="w-full h-32 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+    </div>
+    <div class="mt-8">
+        <button
+            class="uppercase text-sm font-bold tracking-wide bg-yellow-600 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+            Send Message
+        </button>
+    </div>
+</div>
+        </div>
+    </div>
+
+
+    <footer class="mt-auto py-1" style="background-color: rgba(37, 38, 65, 1);">
+        <div class="max-w-lg mx-auto">
+            <div class="text-center my-3 text-gray-400 text-sm uppercase">
+                &copy; 2023 Plus for supplies All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="OmaMHELvn4Fn8Z1oauuiCkrlvfZCBdbKIYJhsT8N">
+    
+    <title>Plus for supplies</title>
+
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <link rel="stylesheet" href="/css/app.css" />
+	<script type="module" src="/js/app.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+
+<body class="antialiased flex flex-col min-h-screen">
+    <!-- navbar -->
+    <div x-data="{ open: false }" class="w-full text-gray-700 border border-gray-100">
+        <div class="flex flex-col max-w-screen-xl px-8 mx-auto lg:items-center lg:justify-between lg:flex-row">
+            <div class="flex flex-row items-center justify-between py-5">
+                <a href="http://ahmedstaging.github.io" class="z-50 w-32">
+                    <img src="http://ahmedstaging.github.io/img/logo.png" alt="">
+                </a>
+                <button class="rounded-lg lg:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{ 'hidden': !open, 'h-full': open }"
+                class="flex flex-col flex-grow lg:items-center pb-4 lg:pb-0 lg:flex lg:justify-between lg:flex-row lg:space-x-5 text-gray-800 lg:ml-64 lg:text-sm xl:text-base">
+                <a class="py-3 px-5 text-center border-b lg:p-0 lg:text-left lg:border-0 border-gray-50 hover:font-medium hover:text-gray-900"
+                    href="http://ahmedstaging.github.io">
+                    Home
+                </a>
+                <a class="py-3 px-5 text-center border-b lg:p-0 lg:text-left lg:border-0 border-gray-50 hover:font-medium hover:text-gray-900"
+                    href="http://ahmedstaging.github.io/about-us.html">
+                    About Us
+                </a>
+                <a class="py-3 px-5 text-center border-b lg:p-0 lg:text-left lg:border-0 border-gray-50 hover:font-medium hover:text-gray-900"
+                    href="http://ahmedstaging.github.io/products.html">
+                    Products
+                </a>
+                <a class="py-3 px-5 text-center border-b lg:p-0 lg:text-left lg:border-0 border-gray-50 hover:font-medium hover:text-gray-900"
+                    href="http://ahmedstaging.github.io/clients.html">
+                    Clients
+                </a>
+                <a class="py-3 px-5 text-center border-b lg:p-0 lg:text-left lg:border-0 border-gray-50 font-medium text-gray-900"
+                    href="http://ahmedstaging.github.io/news.html">
+                    News
+                </a>
+                <a class="py-3 px-5 text-center border-b lg:p-0 lg:text-left lg:border-0 border-gray-50 hover:font-medium hover:text-gray-900"
+                    href="http://ahmedstaging.github.io/contact-us.html">
+                    Contact us
+                </a>
+                <a class="py-3 px-5 text-center border-b lg:p-0 lg:text-left lg:border-0 border-gray-50 hover:font-medium hover:text-gray-900"
+                    href="http://ahmedstaging.github.io/carrer.html">
+                    Career
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <div
+        class="mt-8 container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden space-y-12  border-gray-100 py-4">
+        <div class="text-4xl font-bold w-fit leading-[0.6em] border-b-[0.3em] border-[#ffda00] mx-auto">
+            Projects Approvals
+        </div>
+
+        <div class="grid gap-4 grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+                            <div class="border shadow-lg">
+                    <img src="https://placehold.co/1200x1700" class="object-cover h-full w-full" data-enlargable>
+                </div>
+                            <div class="border shadow-lg">
+                    <img src="https://placehold.co/1200x1700" class="object-cover h-full w-full" data-enlargable>
+                </div>
+                            <div class="border shadow-lg">
+                    <img src="https://placehold.co/1200x1700" class="object-cover h-full w-full" data-enlargable>
+                </div>
+                            <div class="border shadow-lg">
+                    <img src="https://placehold.co/1200x1700" class="object-cover h-full w-full" data-enlargable>
+                </div>
+                            <div class="border shadow-lg">
+                    <img src="https://placehold.co/1200x1700" class="object-cover h-full w-full" data-enlargable>
+                </div>
+                            <div class="border shadow-lg">
+                    <img src="https://placehold.co/1200x1700" class="object-cover h-full w-full" data-enlargable>
+                </div>
+                            <div class="border shadow-lg">
+                    <img src="https://placehold.co/1200x1700" class="object-cover h-full w-full" data-enlargable>
+                </div>
+                    </div>
+    </div>
+
+    <style>
+        img[data-enlargable] {
+            cursor: zoom-in;
+        }
+    </style>
+
+    <script>
+        document.querySelectorAll('img[data-enlargable]').forEach(element => {
+            element.classList.add('img-enlargable');
+            element.addEventListener('click', function() {
+                let d1 = document.createElement('div');
+                let d2 = document.createElement('div');
+                let i1 = document.createElement('i');
+
+                d1.style.background = 'rgba(0,0,0,.5) url(' + element.src + ') no-repeat center';
+                d1.style.backgroundSize = 'contain';
+                d1.style.border = 'inset 40px transparent';
+                d1.style.width = '100%';
+                d1.style.height = '100%';
+                d1.style.position = 'fixed';
+                d1.style.zIndex = '10000';
+                d1.style.top = '0';
+                d1.style.left = '0';
+
+                d1.addEventListener('click', function() {
+                    d1.parentElement.removeChild(d1);
+                });
+
+                i1.classList.add('fa-solid', 'fa-xmark', 'fa-2x');
+                d2.appendChild(i1);
+                d2.style.position = 'fixed';
+                d2.style.top = '0';
+                d2.style.right = '0';
+                d2.style.padding = '20px';
+                d2.style.zIndex = '10000';
+                d2.style.color = '#ffffff';
+                d2.style.cursor = 'pointer';
+
+                d1.appendChild(d2);
+
+                document.body.appendChild(d1);
+            });
+        });
+    </script>
+
+
+    <footer class="mt-auto py-1" style="background-color: rgba(37, 38, 65, 1);">
+        <div class="max-w-lg mx-auto">
+            <div class="text-center my-3 text-gray-400 text-sm uppercase">
+                &copy; 2023 Plus for supplies All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
